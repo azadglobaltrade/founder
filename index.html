@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>latticework — Track your growth · 963 mental models</title>
+<meta name="description" content="Track your learning streak, weekly growth and discipline progress across 963 mental models." />
+<meta name="theme-color" content="#F3EFE4" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain"></div>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="index.html" id="brandHomeIdx">latticework<span class="dot">.</span></a>
+    <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="mast-nav" id="mastNav">
+      <a href="library.html">Library</a>
+      <a href="founder.html">Founder Track</a>
+      <a href="lattice.html">Lattice</a>
+      <a href="colophon.html">Colophon</a>
+    </nav>
+    <div class="mast-right">
+      <div class="progress-wrap" title="Your studied progress">
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <span id="progressLabel">0 / 963 studied</span>
+      </div>
+      <button id="randomBtn" class="btn small">Surprise me</button>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="kicker">YOUR GROWTH DASHBOARD &nbsp;·&nbsp; STREAK · GOALS · PROGRESS</p>
+    <h1>Grow one model<br/>at a <em>time.</em></h1>
+    <p class="lede">Your latticework progress — studied plates, daily streak, weekly momentum and next best plate. Mark plates studied anywhere and this dashboard updates instantly.</p>
+    <div class="hero-stats">
+      <div><b id="statModels">963</b><span>mental models</span></div>
+      <div><b>18</b><span>disciplines</span></div>
+      <div><b id="statStudied">0</b><span>studied by you</span></div>
+      <div><b>∞</b><span>connections</span></div>
+    </div>
+    <div class="hero-search">
+      <input id="heroSearch" type="search" placeholder="Search growth… try &quot;capital allocation&quot;, &quot;bayes&quot;…" autocomplete="off" />
+      <button class="btn ember" id="heroGo">Browse the library →</button>
+    </div>
+  </div>
+</section>
+<section class="growth-sec" id="growth">
+  <div class="growth-inner">
+    <div class="growth-head">
+      <div><p class="kicker">◉ PROGRESS TRACKING · LIVE FROM YOUR BROWSER</p>
+      <h2 id="growthTitle">Your growth, at a glance.</h2>
+      <p class="growth-sub" id="growthSub">Every “Mark studied” tap is timestamped and remembered — even if you unmark later, your journal keeps the history.</p>
+      <small id="memoryLine" style="font-family:'Space Mono',monospace;color:var(--muted)"></small></div>
+      <div class="growth-cta"><button class="btn ember" id="continueBtn">Continue →</button><button class="btn" id="todayBtn">✦ Today’s plate</button></div>
+    </div>
+    <div class="growth-grid">
+      <div class="gcard">
+        <h3>OVERALL COMPLETION</h3>
+        <div class="ring-wrap">
+          <svg class="ring" viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="52" fill="none" stroke-width="12"/><circle class="fg" id="ringFg" cx="60" cy="60" r="52" fill="none" stroke-width="12" stroke-dasharray="326.7" stroke-dashoffset="326.7"/></svg>
+          <div><div class="ring-num" id="ringNum">0%</div><small id="ringLabel">0 / 963 studied</small><div style="margin-top:6px"><small id="streakLabel">🔥 0-day streak</small></div></div>
+        </div>
+        <div class="gstats">
+          <div class="gstat"><b id="gToday">0</b><span>today</span></div>
+          <div class="gstat"><b id="gWeek">0</b><span>this week</span></div>
+          <div class="gstat"><b id="gStreak">0</b><span>day streak</span></div>
+          <div class="gstat"><b id="gGoalPct">0%</b><span>of daily goal</span></div>
+        </div>
+        <div class="goal-row"><input id="goalInput" type="text" inputmode="numeric" placeholder="Daily goal (e.g. 3)" aria-label="Daily goal" /><button class="btn small" id="goalSave">Set goal</button></div>
+        <div class="goal-msg" id="goalMsg"></div>
+      </div>
+      <div class="gcard">
+        <h3>LAST 7 DAYS · PLATES PER DAY</h3>
+        <div class="week" id="weekChart"></div>
+        <small style="font-family:'Space Mono',monospace;color:var(--muted)" id="weekLabel"></small>
+        <div class="goal-row"><button class="btn small" id="exportBtn">⤓ Export memory</button><button class="btn small ghost" id="resetBtn">Reset</button></div>
+        <h3 style="margin-top:16px">KEEP GROWING</h3>
+        <div class="mini-grid" id="nextGrid"></div>
+      </div>
+      <div class="gcard">
+        <h3>BY DISCIPLINE · 18 TRACKS</h3>
+        <div class="discProg" id="discProg"></div>
+      </div>
+      <div class="gcard daily-wide">
+        <h3>TODAY'S 10 · <span id="dailyDate">—</span></h3>
+        <div class="daily-nav">
+          <button class="btn small ghost" id="dailyPrev">← Prev day</button>
+          <button class="btn small ghost" id="dailyTodayBtn">Today</button>
+          <button class="btn small ghost" id="dailyNext">Next day →</button>
+        </div>
+        <div class="daily-progress"><div class="pbar"><i id="dailyFill"></i></div><small id="dailyLabel">0 / 10 studied</small></div>
+        <div class="daily-grid" id="dailyGrid"></div>
+        <h3 style="margin-top:16px">REVISION QUEUE · 3 · 7 · 18 · 30 DAYS</h3>
+        <p class="rev-sub" id="revSub">Learn a plate and it returns for revision after 3, 7, 18 and 30 days — counted from the day you learned it.</p>
+        <div class="rev-stats" id="revStats"></div>
+        <div class="rev-list" id="revList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<main id="home-main">
+<section class="colophon" id="colophon">
+  <div class="col-inner">
+    <p class="kicker">COLOPHON</p>
+    <h2>How to use this field guide <span class="mini">— <a href="colophon.html">open the Colophon page →</a></span></h2>
+    <div class="cols3">
+      <div><h4>1 · Browse</h4><p>Filter by discipline, search by problem. Every plate has a number (001–963), a tight definition, a concrete scenario and an LLM prompt. Start in the <a href="library.html">Library</a> or on the <a href="lattice.html">Lattice map</a>.</p></div>
+      <div><h4>2 · Study</h4><p>Tap Mark studied when an idea clicks. Progress persists in your browser — build your own lattice, one plate at a time. Founders: follow the <a href="founder.html">10-step sequence</a>.</p></div>
+      <div><h4>3 · Apply</h4><p>Copy the prompt, paste into ChatGPT / Claude / Gemini with your real problem attached. Ask for second-order effects and disconfirmation.</p></div>
+    </div>
+    <p class="fine">Set in Fraunces & Space Mono on warm paper #F3EFE4 · ink #211D14 · ember #C65A2E · verdigris #2E7F74 · A loving study-copy inspired by latticework.page — all 963 plates generated as a browsable facsimile for learning.</p>
+  </div>
+</section>
+</main>
+<footer><span>latticework. — hang experience on models.</span><span>963 plates · 18 disciplines · built with care</span></footer>
+<div class="modal-back" id="modalBack" hidden><article class="modal" role="dialog" aria-modal="true">
+<button class="x" id="modalX">✕</button>
+<div class="modal-top"><span id="mNum"></span><span id="mDisc"></span><span id="mConn"></span></div>
+<h2 id="mName"></h2><p class="tagline" id="mTag"></p><p class="desc" id="mDesc"></p>
+<div class="fig"><div class="fig-art" id="mArt"></div><p id="mCap"></p></div>
+<h4>◈ EXAMPLE SCENARIO</h4><p id="mEx"></p>
+<h4>✦ LLM PROMPT <button class="btn small" id="copyBtn">Copy prompt</button></h4>
+<pre id="mPrompt"></pre>
+<h4>⁘ CONNECTED PLATES</h4><div id="mRel" class="rel"></div>
+<div class="modal-nav"><button class="btn ghost" id="prevBtn">← Prev</button>
+<button class="btn ember" id="studyBtn">Mark studied</button>
+<button class="btn ghost" id="nextBtn">Next →</button></div>
+</article></div>
+<div class="toast" id="toast" hidden>Copied!</div>
+<script>window._ONINDEX=true;</script>
+<script src="data.js"></script>
+<script src="seeds1.js"></script>
+<script src="seeds2.js"></script>
+<script src="seeds3.js"></script>
+<script src="seedsAgt1.js"></script>
+<script src="seedsAgt2.js"></script>
+<script src="seedsMil1.js"></script>
+<script src="seedsMil2.js"></script>
+<script src="agt.js"></script>
+<script src="gen.js"></script>
+<script src="graph.js"></script>
+<script src="app.js"></script>
+<script src="ux.js"></script>
+<script src="lattice.js"></script>
+<script src="mobile.js"></script>
+<script src="growth.js"></script>
+<script src="growth2.js"></script>
+<script src="daily.js"></script>
+<script src="revise.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Founder Track · latticework — capital, decisions & leverage</title>
+<meta name="description" content="24 finance and mathematics plates for building AGT into a large export business." />
+<meta name="theme-color" content="#F3EFE4" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain"></div>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="index.html" id="brandHome">latticework<span class="dot">.</span></a>
+    <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="mast-nav" id="mastNav">
+      <a href="library.html">Library</a>
+      <a href="founder.html" class="on">Founder Track</a>
+      <a href="lattice.html">Lattice</a>
+      <a href="colophon.html">Colophon</a>
+    </nav>
+    <div class="mast-right">
+      <div class="progress-wrap" title="Your studied progress">
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <span id="progressLabel">0 / 963 studied</span>
+      </div>
+      <button id="randomBtn" class="btn small">Surprise me</button>
+    </div>
+  </div>
+</header>
+<section class="founder-sec" id="founderTrack" style="border-top:none">
+  <div class="founder-inner">
+    <p class="kicker">FOUNDER TRACK · FOR AGT EXPORT AMBITION</p>
+    <h1 style="font-family:Fraunces,serif;font-size:clamp(32px,5vw,58px);margin:10px 0 8px">Capital, decisions &amp; leverage.</h1>
+    <p class="founder-lede">The financial and mathematical studies that give a founder enormous leverage — allocate capital, predict outcomes, design incentives, coordinate people, and build systems that produce results beyond personal effort. Highest-priority combination: <b>accounting + working capital + unit economics + capital allocation</b>.</p>
+    <div class="sib-nav">
+      <a href="library.html">Browse all 963 in Library</a>
+      <a href="lattice.html">See them on the Lattice</a>
+      <a href="colophon.html">How to study</a>
+    </div>
+    <div class="founder-progress"><div class="pbar"><i id="agtFill"></i></div><small id="agtLabel">0 / 24 studied</small></div>
+    <div class="founder-grid" id="agtGrid"></div>
+    <h3>Leverage of other people's effort</h3>
+    <div class="lev-grid" id="agtLev"></div>
+    <h3>The curriculum</h3>
+    <div class="track-tables" id="agtTracks"></div>
+    <h3>Recommended study sequence</h3>
+    <ol class="seq-list" id="agtSeq"></ol>
+    <p class="fine">Learn each subject through a real business problem, not textbooks: capital allocation on a marketing budget, probability on buyer quality, optimization on team workload. Aim to become the person who decides where capital goes, who does what, how risk is controlled, and which systems let the business scale.</p>
+  </div>
+</section>
+<footer><span>latticework. — hang experience on models.</span><span>Founder Track · 24 plates · AGT curriculum</span></footer>
+<div class="modal-back" id="modalBack" hidden><article class="modal" role="dialog" aria-modal="true">
+<button class="x" id="modalX">X</button>
+<div class="modal-top"><span id="mNum"></span><span id="mDisc"></span><span id="mConn"></span></div>
+<h2 id="mName"></h2><p class="tagline" id="mTag"></p><p class="desc" id="mDesc"></p>
+<div class="fig"><div class="fig-art" id="mArt"></div><p id="mCap"></p></div>
+<h4>EXAMPLE SCENARIO</h4><p id="mEx"></p>
+<h4>LLM PROMPT <button class="btn small" id="copyBtn">Copy prompt</button></h4>
+<pre id="mPrompt"></pre>
+<h4>CONNECTED PLATES</h4><div id="mRel" class="rel"></div>
+<div class="modal-nav"><button class="btn ghost" id="prevBtn">Prev</button>
+<button class="btn ember" id="studyBtn">Mark studied</button>
+<button class="btn ghost" id="nextBtn">Next</button></div>
+</article></div>
+<div class="toast" id="toast" hidden>Copied!</div>
+<script src="data.js"></script>
+<script src="seeds1.js"></script>
+<script src="seeds2.js"></script>
+<script src="seeds3.js"></script>
+<script src="seedsAgt1.js"></script>
+<script src="seedsAgt2.js"></script>
+<script src="seedsMil1.js"></script>
+<script src="seedsMil2.js"></script>
+<script src="agt.js"></script>
+<script src="gen.js"></script>
+<script src="graph.js"></script>
+<script src="app.js"></script>
+<script src="ux.js"></script>
+<script src="lattice.js"></script>
+<script src="agtTrack.js"></script>
+<script src="mobile.js"></script>
+<script src="growth.js"></script>
+</body>
+</html>

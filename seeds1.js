@@ -1,0 +1,15 @@
+window.SEEDS=[
+[0,"Inversion","Avoid stupidity before seeking brilliance.","Ask what guarantees failure, then avoid it. Subtraction beats addition.","A founder lists 10 ways the startup dies and designs guardrails first."],
+[0,"Confirmation Bias","We see what we already believe.","We favour confirming info and ignore the rest. Seek disconfirmation.","An investor writes the bear case before buying any stock."],
+[0,"Loss Aversion","Losses sting twice as much as gains please.","Losing $100 hurts ~2x more than gaining $100 pleases.","A manager frames change as preventing loss — adoption triples."],
+[0,"Anchoring","First numbers stick like glue.","First figures drag later estimates toward them. Set anchors deliberately.","A negotiator opens high so the middle still favours them."],
+[0,"Bike-Shedding","Big risks ignored, small details debated.","Groups debate trivia they grasp and neglect vital complexity.","A board debates paint for an hour, approves $10M in minutes."],
+[1,"Opportunity Cost","Every yes is a thousand nos.","True cost is the best alternative forgone.","A job offer is priced against the startup equity declined."],
+[1,"Sunk Cost Fallacy","Gone money must not steer.","Unrecoverable past costs are irrelevant; only future costs matter.","Staying in a bad movie because you paid is paying twice."],
+[1,"Incentives Rule Everything","Show me the incentive, I'll show the outcome.","Behaviour follows rewards. Surprised? Find the reward.","Tickets drop when agents are bonused on resolution, not closure."],
+[1,"Diminishing Returns","More helps until it doesn't.","Past a point each extra input yields less output.","The 10th weekly meeting adds nothing."],
+[2,"Circle of Competence","Know the edge of what you know.","Operate where you have edge; size bets to certainty.","Buffett dominates insurance he understands, skips tech he can't."],
+[2,"Economic Moat","Build a castle with a wide moat.","Brand, network, scale and switching costs protect profits.","Apple's ecosystem makes leaving costlier than staying."],
+[2,"Pareto 80/20","A few inputs drive most outputs.","80% of effects from 20% of causes. Feed the vital few.","20% of customers drive 80% of profit — and complaints."],
+[3,"Expected Value","Probability times payoff, minus cost.","Sum odds-weighted outcomes. Take +EV bets repeatedly.","A 10% shot at $1M for $50k is good — if ruin won't kill you."],
+[3,"Regret Minimization","Choose what 80-year-old you applauds.","Minimise long-term regret, not short-term fear.","Bezos left Wall St because not trying Amazon hurt more at 80."]];

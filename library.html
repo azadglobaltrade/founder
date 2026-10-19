@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Library · latticework — 963 mental models</title>
+<meta name="description" content="Browse all 963 mental models across 18 disciplines." />
+<meta name="theme-color" content="#F3EFE4" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain"></div>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="index.html" id="brandHome">latticework<span class="dot">.</span></a>
+    <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="mast-nav" id="mastNav">
+      <a href="library.html" class="on">Library</a>
+      <a href="founder.html">Founder Track</a>
+      <a href="lattice.html">Lattice</a>
+      <a href="colophon.html">Colophon</a>
+    </nav>
+    <div class="mast-right">
+      <div class="progress-wrap" title="Your studied progress">
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <span id="progressLabel">0 / 963 studied</span>
+      </div>
+      <button id="randomBtn" class="btn small">Surprise me</button>
+    </div>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="page-inner">
+    <p class="kicker">THE LIBRARY · ALL 963 PLATES</p>
+    <h1>Browse every model.</h1>
+    <p class="page-sub">Search, filter by discipline, sort and study. Every plate opens with a definition, scenario, LLM prompt and real connections. Your progress saves in this browser.</p>
+    <div class="page-stats">
+      <div><b id="statModels">963</b><span>mental models</span></div>
+      <div><b>18</b><span>disciplines</span></div>
+      <div><b id="statStudied">0</b><span>studied by you</span></div>
+    </div>
+    <div class="sib-nav">
+      <a href="founder.html">Founder Track</a>
+      <a href="lattice.html">Open the Lattice map</a>
+      <a href="colophon.html">How to use this</a>
+    </div>
+  </div>
+</section>
+<main id="library">
+<div class="controls">
+  <div class="controls-inner">
+    <div class="row1">
+      <input id="q" type="search" placeholder="Search 963 models… ( / to focus )" autocomplete="off"/>
+      <select id="sort"><option value="num">No ascending</option><option value="numDesc">No descending</option><option value="az">A to Z</option><option value="discipline">By discipline</option></select>
+      <label class="check"><input type="checkbox" id="hideStudied"/> hide studied</label>
+      <label class="check"><input type="checkbox" id="onlyStudied"/> studied only</label>
+      <button id="clearBtn" class="btn ghost small">Reset</button>
+    </div>
+    <div class="pills" id="pills"></div>
+    <p class="count" id="count"></p>
+  </div>
+</div>
+<div class="grid-wrap"><div class="grid" id="grid"></div>
+<div class="empty" id="empty" hidden>No plates match. <button class="btn small" id="emptyReset">Clear filters</button></div>
+</div>
+<section class="milstudy" id="milstudy">
+  <div class="mil-inner">
+    <p class="kicker">STUDY MAP · MILITARY WARFARE STRATEGIES</p>
+    <h2>How limited means serve political ends.</h2>
+    <p class="page-sub">Military strategy studies how states, commanders and organizations use limited resources, information, time, alliances and force to achieve political objectives. This map organizes the major concepts as a <b>study curriculum</b> — historical and analytical, not instructions for violence. Framework after Echevarria's <i>Military Strategy: A Very Short Introduction</i>.</p>
+    <div class="mil-progress"><div class="pbar"><i id="milFill"></i></div><small id="milLabel">0 studied</small></div>
+    <h3>1 · Hierarchy of strategy</h3>
+    <div class="hier-grid">
+      <div class="hier"><h4>Grand strategy</h4><p>National objectives, diplomacy, economics, alliances and military power.</p></div>
+      <div class="hier"><h4>Military strategy</h4><p>How military power contributes to political objectives.</p></div>
+      <div class="hier"><h4>Operational art</h4><p>Connect objectives, resources, time and multiple operations.</p></div>
+      <div class="hier"><h4>Tactics</h4><p>How forces conduct particular engagements and immediate actions.</p></div>
+    </div>
+    <p class="fine">Winning an engagement need not win the campaign; winning the campaign need not achieve the political objective.</p>
+    <h3>2 · Families of strategy — the plates</h3>
+    <div class="mil-grid" id="milGrid"></div>
+    <h3>3 · Operational &amp; campaign approaches</h3>
+    <div class="track scr"><table>
+      <tr><th>Approach</th><th>Core concept</th></tr>
+      <tr><td><b>Maneuver warfare</b></td><td>Advantage through movement and disruption over firepower alone.</td></tr>
+      <tr><td><b>Positional warfare</b></td><td>Control and defense of positions and terrain.</td></tr>
+      <tr><td><b>Concentration of force</b></td><td>Focus decisive capability on the decisive objective.</td></tr>
+      <tr><td><b>Economy of force</b></td><td>Limit secondary commitments to preserve the main effort.</td></tr>
+      <tr><td><b>Interior / exterior lines</b></td><td>Central position vs coordinated action from separated positions.</td></tr>
+      <tr><td><b>Defense in depth</b></td><td>Multiple layers rather than a single line.</td></tr>
+      <tr><td><b>Delay, withdrawal, counteroffensive</b></td><td>Trade space or time to preserve options; retake initiative when conditions change.</td></tr>
+      <tr><td><b>Surprise, deception, tempo</b></td><td>Unanticipated outcomes, shaped beliefs, controlled pace.</td></tr>
+      <tr><td><b>Center-of-gravity analysis</b></td><td>What gives the adversary the ability to act or resist.</td></tr>
+      <tr><td><b>Logistics &amp; interdiction</b></td><td>Supply and endurance decide the possible; limit the opponent's sustainment.</td></tr>
+    </table></div>
+    <h3>4 · Forms, domains, thinkers, principles</h3>
+    <div class="track scr"><table>
+      <tr><th>Group</th><th>What to study</th></tr>
+      <tr><td><b>Forms of warfare</b></td><td>Conventional, asymmetric, guerrilla, insurgency, counterinsurgency, proxy, hybrid, coalition, expeditionary, urban.</td></tr>
+      <tr><td><b>Domains</b></td><td>Maritime and sea control; air superiority; space services; cyber resilience; information and intelligence; electronic warfare; nuclear deterrence; economic and industrial endurance.</td></tr>
+      <tr><td><b>Thinkers</b></td><td>Sun Tzu, Clausewitz, Jomini, Liddell Hart, Mahan, Corbett, Boyd (OODA), Schelling.</td></tr>
+      <tr><td><b>Principles</b></td><td>Objective, concentration, economy of force, maneuver, initiative, security, surprise, unity of effort, simplicity, logistics, adaptation, political purpose.</td></tr>
+    </table></div>
+    <p class="fine">Study path: Sun Tzu + Clausewitz, historical campaigns with maps, deterrence and logistics, then game theory and systems analysis. Caution: business competition is not warfare — translate concentration, intelligence, logistics and alliances ethically; never copy deception or coercion literally.</p>
+  <!--PART2-->
+  </div>
+</section>
+</main>
+<footer><span>latticework. — hang experience on models.</span><span>963 plates · 18 disciplines · built with care</span></footer>
+<div class="modal-back" id="modalBack" hidden><article class="modal" role="dialog" aria-modal="true">
+<button class="x" id="modalX">X</button>
+<div class="modal-top"><span id="mNum"></span><span id="mDisc"></span><span id="mConn"></span></div>
+<h2 id="mName"></h2><p class="tagline" id="mTag"></p><p class="desc" id="mDesc"></p>
+<div class="fig"><div class="fig-art" id="mArt"></div><p id="mCap"></p></div>
+<h4>EXAMPLE SCENARIO</h4><p id="mEx"></p>
+<h4>LLM PROMPT <button class="btn small" id="copyBtn">Copy prompt</button></h4>
+<pre id="mPrompt"></pre>
+<h4>CONNECTED PLATES</h4><div id="mRel" class="rel"></div>
+<div class="modal-nav"><button class="btn ghost" id="prevBtn">Prev</button>
+<button class="btn ember" id="studyBtn">Mark studied</button>
+<button class="btn ghost" id="nextBtn">Next</button></div>
+</article></div>
+<div class="toast" id="toast" hidden>Copied!</div>
+<script src="data.js"></script>
+<script src="seeds1.js"></script>
+<script src="seeds2.js"></script>
+<script src="seeds3.js"></script>
+<script src="seedsAgt1.js"></script>
+<script src="seedsAgt2.js"></script>
+<script src="seedsMil1.js"></script>
+<script src="seedsMil2.js"></script>
+<script src="agt.js"></script>
+<script src="gen.js"></script>
+<script src="graph.js"></script>
+<script src="app.js"></script>
+<script src="ux.js"></script>
+<script src="lattice.js"></script>
+<script src="milTrack.js"></script>
+<script src="mobile.js"></script>
+<script src="growth.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Lattice · latticework — 963 plates, 18 pillars, live map</title>
+<meta name="description" content="Interactive map of all 963 mental models clustered around 18 discipline pillars." />
+<meta name="theme-color" content="#F3EFE4" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain"></div>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="index.html" id="brandHome">latticework<span class="dot">.</span></a>
+    <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="mast-nav" id="mastNav">
+      <a href="library.html">Library</a>
+      <a href="founder.html">Founder Track</a>
+      <a href="lattice.html" class="on">Lattice</a>
+      <a href="colophon.html">Colophon</a>
+    </nav>
+    <div class="mast-right">
+      <div class="progress-wrap" title="Your studied progress">
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <span id="progressLabel">0 / 963 studied</span>
+      </div>
+      <button id="randomBtn" class="btn small">Surprise me</button>
+    </div>
+  </div>
+</header>
+<section class="lattice-sec" id="latticeSec">
+  <div class="lattice-inner">
+    <p class="kicker">THE LATTICE · LIVE MAP</p>
+    <h2>Everything is connected.</h2>
+    <p class="lattice-sub">All <b>963 plates</b> clustered around <b>18 discipline pillars</b>, woven with real links. Drag to pan · scroll to zoom · drag any node to rearrange · hover to inspect · click to focus · double-click to open.</p>
+    <div class="sib-nav">
+      <a href="library.html">Browse in Library</a>
+      <a href="founder.html">Founder Track</a>
+      <a href="colophon.html">How to use this</a>
+    </div>
+    <div class="lat-toolbar">
+      <input id="latSearch" type="search" placeholder="Find a plate on the map… e.g. moat, entropy" autocomplete="off"/>
+      <div class="lat-modes">
+        <button data-mode="all" class="on">Constellation</button>
+        <button data-mode="pillars">18 Pillars</button>
+        <button id="latReset" title="Reset pan and zoom">Reset view</button>
+      </div>
+    </div>
+    <div class="lat-chips" id="latChips"></div>
+    <div class="lat-toggles">
+      <label><input type="checkbox" id="tLinks" checked/> links</label>
+      <label><input type="checkbox" id="tLabels" checked/> labels</label>
+      <label><input type="checkbox" id="tMotion" checked/> drift</label>
+      <label><input type="checkbox" id="tStudied"/> studied-only</label>
+      <span class="lat-statline" id="latStats">—</span>
+    </div>
+    <div class="lattice-flex2">
+      <div class="lat-canvas-wrap">
+        <canvas id="latticeCanvas"></canvas>
+        <div class="lat-tip" id="latTip" hidden></div>
+      </div>
+      <aside class="lattice-side">
+        <h3 id="latName">—</h3>
+        <p id="latMeta"></p>
+        <div id="latPBar"></div>
+        <p id="latDesc"></p>
+        <div id="latExtra"></div>
+        <div class="side-btns"><button class="btn small" id="latOpen">Open plate</button><button class="btn small ghost" id="latLib">View in library</button></div>
+      </aside>
+    </div>
+    <div class="lat-legend" id="latLegend"></div>
+  </div>
+</section>
+<footer><span>latticework. — hang experience on models.</span><span>Lattice · 963 nodes · 18 pillars</span></footer>
+<div class="modal-back" id="modalBack" hidden><article class="modal" role="dialog" aria-modal="true">
+<button class="x" id="modalX">X</button>
+<div class="modal-top"><span id="mNum"></span><span id="mDisc"></span><span id="mConn"></span></div>
+<h2 id="mName"></h2><p class="tagline" id="mTag"></p><p class="desc" id="mDesc"></p>
+<div class="fig"><div class="fig-art" id="mArt"></div><p id="mCap"></p></div>
+<h4>EXAMPLE SCENARIO</h4><p id="mEx"></p>
+<h4>LLM PROMPT <button class="btn small" id="copyBtn">Copy prompt</button></h4>
+<pre id="mPrompt"></pre>
+<h4>CONNECTED PLATES</h4><div id="mRel" class="rel"></div>
+<div class="modal-nav"><button class="btn ghost" id="prevBtn">Prev</button>
+<button class="btn ember" id="studyBtn">Mark studied</button>
+<button class="btn ghost" id="nextBtn">Next</button></div>
+</article></div>
+<div class="toast" id="toast" hidden>Copied!</div>
+<script src="data.js"></script>
+<script src="seeds1.js"></script>
+<script src="seeds2.js"></script>
+<script src="seeds3.js"></script>
+<script src="seedsAgt1.js"></script>
+<script src="seedsAgt2.js"></script>
+<script src="seedsMil1.js"></script>
+<script src="seedsMil2.js"></script>
+<script src="agt.js"></script>
+<script src="gen.js"></script>
+<script src="graph.js"></script>
+<script src="app.js"></script>
+<script src="ux.js"></script>
+<script src="lattice.js"></script>
+<script src="latticeA.js"></script>
+<script src="latticeB.js"></script>
+<script src="latticeC.js"></script>
+<script src="latticeD.js"></script>
+<script src="mobile.js"></script>
+<script src="growth.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Colophon · latticework — how to use this field guide</title>
+<meta name="description" content="How to browse, study and apply 963 mental models. Disciplines, method, credits." />
+<meta name="theme-color" content="#F3EFE4" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain"></div>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="index.html" id="brandHome">latticework<span class="dot">.</span></a>
+    <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="mast-nav" id="mastNav">
+      <a href="library.html">Library</a>
+      <a href="founder.html">Founder Track</a>
+      <a href="lattice.html">Lattice</a>
+      <a href="colophon.html" class="on">Colophon</a>
+    </nav>
+    <div class="mast-right">
+      <div class="progress-wrap" title="Your studied progress">
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <span id="progressLabel">0 / 963 studied</span>
+      </div>
+      <button id="randomBtn" class="btn small">Surprise me</button>
+    </div>
+  </div>
+</header>
+<section class="colophon" id="colophon">
+  <div class="col-inner">
+    <p class="kicker">COLOPHON</p>
+    <h1 style="font-family:Fraunces,serif;font-size:clamp(32px,5vw,58px);margin:10px 0 8px">How to use this field guide.</h1>
+    <p class="page-sub">Charlie Munger's idea: carry a latticework of models in your head and reach for the right one. This site gives you 963 of them — named, numbered, illustrated and wired to neighbours.</p>
+    <div class="sib-nav">
+      <a href="library.html">Start in the Library</a>
+      <a href="founder.html">Or follow the Founder Track</a>
+      <a href="lattice.html">Or explore the Lattice</a>
+    </div>
+    <div class="cols3" style="margin-top:22px">
+      <div><h4>1 · Browse</h4><p>Filter by discipline, search by problem. Every plate has a number (001–963), a tight definition, a concrete scenario and an LLM prompt. Try the Library search or the Lattice map search.</p></div>
+      <div><h4>2 · Study</h4><p>Tap Mark studied when an idea clicks. Progress persists in your browser across all four pages — build your own lattice, one plate at a time.</p></div>
+      <div><h4>3 · Apply</h4><p>Copy the prompt, paste into ChatGPT / Claude / Gemini with your real problem attached. Ask for second-order effects and disconfirmation. The Founder Track shows how: one real business problem per subject.</p></div>
+    </div>
+    <h3 style="font-family:Fraunces,serif;font-size:24px;margin:28px 0 12px">The 18 disciplines</h3>
+    <div class="track scr"><table class="disc-table" id="discTable"><tr><th>#</th><th>Discipline</th><th>Plates</th><th> lens</th><th>Explore</th></tr></table></div>
+    <h3 style="font-family:Fraunces,serif;font-size:24px;margin:28px 0 12px">Method &amp; credits</h3>
+    <div class="cols3">
+      <div><h4>Plates</h4><p>~70 famous models are hand-written (inversion, moats, Pareto, entropy, OODA, Lindy…). 24 founder plates cover your AGT capital × decisions × leverage curriculum. The remainder deterministically fill each discipline to 963 so every filter is complete.</p></div>
+      <div><h4>Connections</h4><p>Each plate links to ~5 neighbours: same-discipline siblings plus bridges to related disciplines and one long-range jump — 2,566 edges total, shared by the Library, the plate modal and the Lattice map.</p></div>
+      <div><h4>Design</h4><p>Set in Fraunces &amp; Space Mono on warm paper #F3EFE4 · ink #211D14 · ember #C65A2E · verdigris #2E7F74. A loving study-copy inspired by latticework.page, built for learning.</p></div>
+    </div>
+  </div>
+</section>
+<footer><span>latticework. — hang experience on models.</span><span>963 plates · 18 disciplines · built with care</span></footer>
+<div class="modal-back" id="modalBack" hidden><article class="modal" role="dialog" aria-modal="true">
+<button class="x" id="modalX">X</button>
+<div class="modal-top"><span id="mNum"></span><span id="mDisc"></span><span id="mConn"></span></div>
+<h2 id="mName"></h2><p class="tagline" id="mTag"></p><p class="desc" id="mDesc"></p>
+<div class="fig"><div class="fig-art" id="mArt"></div><p id="mCap"></p></div>
+<h4>EXAMPLE SCENARIO</h4><p id="mEx"></p>
+<h4>LLM PROMPT <button class="btn small" id="copyBtn">Copy prompt</button></h4>
+<pre id="mPrompt"></pre>
+<h4>CONNECTED PLATES</h4><div id="mRel" class="rel"></div>
+<div class="modal-nav"><button class="btn ghost" id="prevBtn">Prev</button>
+<button class="btn ember" id="studyBtn">Mark studied</button>
+<button class="btn ghost" id="nextBtn">Next</button></div>
+</article></div>
+<div class="toast" id="toast" hidden>Copied!</div>
+<script src="data.js"></script>
+<script src="gen.js"></script>
+<script src="graph.js"></script>
+<script src="app.js"></script>
+<script src="ux.js"></script>
+<script src="lattice.js"></script>
+<script src="colo.js"></script>
+<script src="mobile.js"></script>
+<script src="growth.js"></script>
+</body>
+</html>
